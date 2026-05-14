@@ -1,0 +1,19 @@
+node_modules
+dist
+.env
+.env.local
+.env.production
+.DS_Store
+
+# Cloudflare Worker（秘匿情報を含む場合は別管理）
+worker.js
+worker-secret.js
+
+# エディタ設定
+.vscode/
+.idea/
+
+# ローカルメモ・設定
+*.local
+secrets.txt
+secrets.json

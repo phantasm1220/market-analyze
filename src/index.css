@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Mono:wght@300;400;500&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body, #root {
+  min-height: 100%;
+  background: #07090f;
+  color: white;
+  font-family: 'DM Mono', monospace;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 2px; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-in { animation: fadeIn 0.4s ease forwards; }
+
+@keyframes pulseDot { 0%,100% { opacity: 0.3; } 50% { opacity: 1; } }
+.live { animation: pulseDot 2s ease-in-out infinite; }
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-4px); }
+}
+.bounce-0 { animation: bounce 1s ease-in-out infinite 0s; }
+.bounce-1 { animation: bounce 1s ease-in-out infinite 0.15s; }
+.bounce-2 { animation: bounce 1s ease-in-out infinite 0.3s; }
+
+@keyframes ping {
+  0%    { transform: scale(1); opacity: 1; }
+  75%, 100% { transform: scale(2); opacity: 0; }
+}
+.ping { animation: ping 1s cubic-bezier(0,0,0.2,1) infinite; }
